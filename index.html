@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BhagyakulCo - Loading</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000; /* কালো ব্যাকগ্রাউন্ড */
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 2rem; /* নাম ছোট করা হলো */
+      letter-spacing: 1.5px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000; /* কালো শ্যাডো */
+      margin: auto;
+    }
+
+    /* ছোট ও সাদা progress dots */
+    .loader {
+      position: absolute;
+      bottom: 40px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      animation: bounce 1s infinite alternate;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      from { transform: translateY(0); opacity: 0.6; }
+      to   { transform: translateY(-8px); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>BhagyakulCo</h1>
+  <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</body>
+</html>
